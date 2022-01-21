@@ -1,0 +1,9 @@
+Internet
+Unix
+Bash
+cat >> skills2.txt
+Html
+CSS
+Js
+React
+Redux
