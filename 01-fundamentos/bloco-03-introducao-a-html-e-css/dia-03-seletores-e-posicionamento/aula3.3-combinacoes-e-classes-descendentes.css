@@ -1,0 +1,5 @@
+ol {
+  background-color: yellow;
+}
+ol:nth-of-type(2n) {
+}
