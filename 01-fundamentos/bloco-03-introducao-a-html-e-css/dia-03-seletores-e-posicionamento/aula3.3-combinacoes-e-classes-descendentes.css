@@ -1,5 +1,27 @@
-ol {
+ol,
+ol:nth-child(even) li,
+ol:nth-child(odd) li {
   background-color: yellow;
+  color: green;
+  text-transform: uppercase;
 }
-ol:nth-of-type(2n) {
+h1,
+h3 {
+  color: red;
+}
+h1 {
+  font-size: 40px;
+  border: 1px solid black;
+}
+li {
+  font-size: 20px;
+}
+li em {
+  font-weight: bold;
+}
+.java {
+  background-color: pink;
+}
+.blue {
+  color: blue;
 }
