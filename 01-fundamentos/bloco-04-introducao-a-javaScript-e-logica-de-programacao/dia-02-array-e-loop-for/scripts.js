@@ -15,10 +15,12 @@ const reducer = (previousValue, currentValue) => previousValue + currentValue;
   console.log(numbers.reduce(reducer));
   
 
-// exercise 3
+// // exercise 3
 
-let sum = 0; 
-for (let index = 0 ;index < numbers.length; index += 1){
-   sum = numbers[index++];
- } 
-  console.log(sum);
+// let sum = 0; 
+// let maxValue=0;
+
+// for (let index = 0 ;index < numbers.length; index += 1){
+//    sum = number[index] + number
+//  } 
+//   console.log(sum);
