@@ -15,12 +15,34 @@ const reducer = (previousValue, currentValue) => previousValue + currentValue;
   console.log(numbers.reduce(reducer));
   
 
-// // exercise 3
+// // exercise 3 - para execucao desse exercicio foi consultado o repositorio de exercicios do aluno Thiago da tribo 20-A. Username do github: @Thiagofs1983Thiagofs1983. Link: https://github.com/Thiagofs1983/trybe-exercicios/pull/13/commits/fded99743301435b75ec8fdb59dfd3f8554f84d0
+// usando o += eu consigo somar os indices a uma mesma variavel, pois desta forma a variavel guardara o valor da soma no indice atual. 
 
-// let sum = 0; 
-// let maxValue=0;
+
+// let sumOfElements = 0;
 
 // for (let index = 0 ;index < numbers.length; index += 1){
-//    sum = number[index] + number
+//    sumOfElements += numbers[index];
 //  } 
-//   console.log(sum);
+//   console.log(sumOfElements);
+
+// let numberOfElements = numbers.length;
+// let numbersAverage = sumOfElements / numberOfElements;
+//  console.log(numbersAverage);
+
+//  exercise 4 - vou comentar o exericio anterior porque o codigo sera repetido neste exericio, com adaptacoes
+
+let sumOfElements = 0;
+
+  for (let index = 0 ;index < numbers.length; index += 1){
+    sumOfElements += numbers[index];
+  }
+    
+let numberOfElements = numbers.length;
+let numbersAverage = sumOfElements / numberOfElements;
+
+  if (numbersAverage > 20) {
+    console.log("valor maior que 20.");
+  } else {
+    console.log("valor menor ou igual a 20.");
+  }
