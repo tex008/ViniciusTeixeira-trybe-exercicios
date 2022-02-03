@@ -102,3 +102,7 @@ console.log(newArray);
 
 
 // exercise 9 -->Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+
+for (let index = 0; index < newArray.length; index +=1){
+  console.log(newArray[index] / 2 );
+}
