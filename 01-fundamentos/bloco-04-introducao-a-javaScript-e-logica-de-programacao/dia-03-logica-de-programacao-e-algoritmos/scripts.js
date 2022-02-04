@@ -23,3 +23,9 @@ for (index = word.length -1; index >= 0; index -=1){
   drow.push(word[index]);
 }
 console.log(drow);
+
+// 3- Considere o array de strings abaixo:
+
+// Escreva dois algoritmos: um que retorne a maior palavra deste array e outro que retorne a menor. Considere o número de caracteres de cada palavra.
+
+let array = ['java', 'javascript', 'python', 'html', 'css'];
