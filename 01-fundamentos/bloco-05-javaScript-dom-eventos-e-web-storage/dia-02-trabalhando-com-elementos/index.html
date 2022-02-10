@@ -60,32 +60,87 @@
 <body>
   <script>
     // COLOQUE SEU CÓDIGO AQUI
-    function addh1() {
-      let h1 = document.createElement('h1');
-      h1.innerText = 'Exercicio 5.2 - JavaScript DOM'
-      document.body.appendChild(h1);
-    }
-    addh1();
 
-    function addElements() {
-      let main = document.createElement('main');
-      main.className = 'main-content';
-      document.body.appendChild(main);
-      let section = document.createElement('section');
-      section.className = 'center-content';
-      main.appendChild(section);
-      let paragraph = document.createElement('p');
-      paragraph.innerHTML = 'que vontade de comer um hamburguer';
-      section.appendChild(paragraph);
-    }
-    addElements();
+    //exercicio1
+    let h1 = document.createElement('h1');
+    h1.innerText = 'Exercicio 5.2 - JavaScript DOM'
+    document.body.appendChild(h1);
 
-    function addSection() {
-      let section = document.createElement('section');
-      section.className = 'left-content';
-      main.appendChild(section);
+    //exercicio2
+    const mainContent = document.createElement('main');
+    mainContent.className = 'main-content';
+    document.body.appendChild(mainContent);
+
+    //exercicio3
+    const sectionInCenter = document.createElement('section');
+    sectionInCenter.className = 'center-content';
+    mainContent.appendChild(sectionInCenter);
+
+    //exercicio4
+    const paragraph = document.createElement('p');
+    paragraph.innerHTML = 'que vontade de comer um hamburguer';
+    sectionInCenter.appendChild(paragraph);
+
+    //exercicio5
+    const sectionInLeft = document.createElement('section');
+    sectionInLeft.className = 'left-content';
+    mainContent.appendChild(sectionInLeft);
+
+    //exercicio6
+    const sectionInRight = document.createElement('section');
+    sectionInRight.className = 'right-content';
+    mainContent.appendChild(sectionInRight);
+
+    //exercicio7
+    let img = document.createElement('img');
+    img.className = 'small-image';
+    img.src = 'https://picsum.photos/200';
+    sectionInLeft.appendChild(img);
+
+    //exercício8
+    const unordedList1To10 = document.createElement('ul');
+    sectionInRight.appendChild(unordedList1To10);
+    const arrays = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    for (index = 0; index < arrays.length; index += 1) {
+      const elementLi = document.createElement('li');
+      elementLi.innerText = arrays[index];
+      unordedList1To10.appendChild(elementLi);
     }
-    addSection();
+
+    //exercicio 9
+    for (index = 1; index <= 3; index += 1) {
+      const elementH3 = document.createElement('h3');
+      elementH3.innerHTML = 'que vontade de tomar umma coca' + index;
+      mainContent.appendChild(elementH3);
+    }
+
+    //Segunda Parte
+
+    //exercicio1
+    const titleH1 = document.querySelector('h1');
+    titleH1.className = 'title';
+
+    //exercicio2
+    const tagH3 = document.querySelectorAll('h3');
+    for (index = 0; index < 3; index += 1) {
+      tagH3[index].className = 'Description';
+    }
+
+    //exercicio3
+    const removeSectionLeft = document.getElementsByClassName('left-content')[0];
+    mainContent.removeChild(removeSectionLeft);
+
+    //exercicio4
+    const rightSectionInCenter = document.getElementsByClassName('right-content')[0];
+    rightSectionInCenter.style.marginRight = 'auto';
+
+    //exercicio5
+    const changeBgColor = document.getElementsByClassName('center-content')[0];
+    changeBgColor.parentNode.style.backgroundColor = 'green';
+
+    //exercicio6
+    unordedList1To10.lastChild.remove();
+    unordedList1To10.lastChild.remove();
   </script>
 </body>
 
