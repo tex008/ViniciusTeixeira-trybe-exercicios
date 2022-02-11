@@ -104,4 +104,49 @@ function createFridayButton(day) {
 
 createFridayButton('Sexta-feira');
 
-// exercicio 5
+// // exercicio 5
+
+//recuperar o botao sexta feira
+//recuperar as sextas feiras
+//criar a modificação do texto
+//adicionar um evento de clique
+//modificar o texto exibido
+function displayFriday(fridayDaysArray){
+  let fridayButton = document.querySelector("#btn-friday");
+  let fridays = document.getElementsByClassName('friday');
+  let newText = 'SEXTOU!'
+
+  fridayButton.addEventListener('click',function(){
+    for (index = 0; index < fridays.length; index +=1 ){
+      if (fridays[index].innerHTML !== newText){
+        fridays[index].innerHTML = newText;
+      } else {
+        fridays[index].innerHTML = fridayDays[index];
+      }
+    }
+})
+}
+let fridayDays = [4,11,18,25];
+displayFriday(fridayDays);
+
+//exercicio 6
+function mouseOver (){
+  let day = document.querySelector('#days');
+
+  day.addEventListener('mouseover',function(event){
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+}
+
+function mouseOut () {
+  let day = document.querySelector('#days');
+
+  day.addEventListener('mouseout',function(event){
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  })
+}
+
+mouseOver ();
+mouseOut ();
