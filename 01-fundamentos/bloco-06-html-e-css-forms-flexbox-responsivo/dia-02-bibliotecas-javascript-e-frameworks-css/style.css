@@ -1,0 +1,8 @@
+body {
+  background-color:aliceblue;
+}
+
+header, form {
+  background-color: white;
+  box-shadow: 10px;
+}

@@ -1,26 +1,38 @@
-const submitButton = document.getElementById('sumbit-button');
-const eraseButton = document.getElementById('erase-button');
+window.onload = function () {
+  const submitBtn = document.querySelector('#submit')
+  submitBtn.addEventListener('click', preventSubmit);
+  const eraseButton = document.getElementById('erase-button');
+  eraseButton.addEventListener('click', clearInputs);
+  const agreementCheck = document.querySelector('#agree-2');
+  agreementCheck.addEventListener('change', enableSubmit);
+}
+
+//declaração das variáveis
 const formText = document.getElementById('form-content');
 const inputName = document.getElementById('nome-completo');
 const inputEmail = document.getElementById('email');
-const number = parseInt(inputName.value);
 
-// submitButton.addEventListener('click', function () {
-//   if (inputName.value < 10 || inputName.value > 40 ) {
-//     window.alert('Dados inválidos!');
-//   } else if (inputEmail.value < 10 || inputName.value > 50) {
-//     window.alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.')
-//   }
-// })
+//função que ativa o botão de submit
+function enableSubmit() {
+  const submitButton = document.querySelector('#sumbit');
+  const agreement = document.querySelector('#agree-2');
+  submitButton.disabled = !agreement.checked;
+}
 
-// formText.addEventListener('click', function () {
-//   formText.child.innerText =''
-// })
+//função enable default do botão submit
+function preventSubmit (event) {
+  event.preventDefault();
+}
 
-// submitButton.addEventListener('click', function () {
-//   console.log(inputName.value);
-// });
+//função para limpar os dados do forumlário
+function clearInputs () {
+  const formData = document.querySelectorAll('input');
+  const textarea = document.querySelector('textarea');
+  for (let index = 0; index < formData.length; index +=1) {
+    const userImput = formData[index];
+    userImput.value = '';
+    userImput.checked = false;
+  }
+  textarea.value = '';
+}
 
-// submitButton.addEventListener('click', function () {
-//   console.log(number);
-// })
