@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #2FC18C;
+  background-color: #357a38;
 }
 
 h1 {
@@ -98,4 +98,8 @@ h1 {
 #input-date {
   margin-top: 10px;
   margin-bottom: 50px;
+}
+
+.button:hover {
+  background-color:#4aa881;
 }

@@ -178,27 +178,27 @@
 // maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
 
 
-// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
 
-// function maisRepete (array) {
-//   let maisVezesSeRepete = 0;
-//   let numeroDeRepeticoes = 0;
-//   let indexNumeroMaisAparece = 0;
+function maisRepete (array) {
+  let maisVezesSeRepete = 0;
+  let numeroDeRepeticoes = 0;
+  let indexNumeroMaisAparece = 0;
   
-//   for (index in array ){
-//     for (index2 in array){
-//       if (array[index] === array[index2]) {
-//         numeroDeRepeticoes = numeroDeRepeticoes + 1;
-//       }
-//     } if (numeroDeRepeticoes > maisVezesSeRepete) {
-//       maisVezesSeRepete = numeroDeRepeticoes
-//       indexNumeroMaisAparece = array[index]
-//     }
-//     numeroDeRepeticoes = 0;
-//   } console.log(indexNumeroMaisAparece);
-// } 
+  for (index in array ){
+    for (index2 in array){
+      if (array[index] === array[index2]) {
+        numeroDeRepeticoes = numeroDeRepeticoes + 1;
+      }
+    } if (numeroDeRepeticoes > maisVezesSeRepete) {
+      maisVezesSeRepete = numeroDeRepeticoes
+      indexNumeroMaisAparece = array[index]
+    }
+    numeroDeRepeticoes = 0;
+  } console.log(indexNumeroMaisAparece);
+} 
 
-// maisRepete([2, 3, 2, 5, 8, 2, 3])
+maisRepete([2, 3, 2, 5, 8, 2, 3])
 
 // 6 - Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
 // Valor de teste: N = 5 .
@@ -256,4 +256,4 @@ function verify (stringWord, stringEnding) {
   }
 }
 
-verify("coco","co");
+verify("macaco","co");

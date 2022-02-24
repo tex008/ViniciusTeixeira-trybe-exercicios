@@ -1,3 +1,6 @@
+document.getElementById('date').DatePickerX.init();
+document.getElementById('date').DatePickerX.setValue();
+
 window.onload = function () {
   const submitBtn = document.querySelector('#submit')
   submitBtn.addEventListener('click', preventSubmit);
