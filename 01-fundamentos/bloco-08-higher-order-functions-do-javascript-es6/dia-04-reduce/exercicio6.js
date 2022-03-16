@@ -23,5 +23,6 @@ function studentAverage() {
 }
 
 
+
 console.log(studentAverage());
 
